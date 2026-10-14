@@ -1,0 +1,13 @@
+{
+  "name": "responsive-grid-sass",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Refactor the CodeGym responsive-grid sample into Sass",
+  "scripts": {
+    "build": "sass main.scss css/main.css",
+    "watch": "sass --watch main.scss:css/main.css"
+  },
+  "devDependencies": {
+    "sass": "^1.105.1"
+  }
+}

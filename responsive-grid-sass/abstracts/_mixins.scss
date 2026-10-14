@@ -1,0 +1,32 @@
+@use "variables" as variables;
+
+@mixin grid-row($height) {
+  height: $height;
+  overflow: auto;
+  position: relative;
+}
+
+@mixin grid-cell($background: variables.$color-gray, $border-color: variables.$color-gray-border) {
+  width: variables.$grid-column-width;
+  height: 100%;
+  margin: 0;
+  float: left;
+  background-color: $background;
+  border-right: 1px solid $border-color;
+}
+
+@mixin full-width-band($background, $height) {
+  width: 100%;
+  height: $height;
+  border-right-color: transparent;
+  background-color: $background;
+}
+
+@mixin guide-cell($include-left-border: false) {
+  background-color: variables.$color-white;
+  border-right: 1px solid variables.$color-black;
+
+  @if $include-left-border {
+    border-left: 1px solid variables.$color-black;
+  }
+}

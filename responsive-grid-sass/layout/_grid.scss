@@ -1,0 +1,98 @@
+@use "../abstracts/mixins" as mixins;
+@use "../abstracts/variables" as variables;
+
+.grid-container {
+  width: 100%;
+}
+
+.grid-stage {
+  position: absolute;
+  right: 10px;
+  left: 8px;
+  width: auto;
+  opacity: variables.$grid-overlay-opacity;
+}
+
+.grid-row {
+  @include mixins.grid-row(variables.$grid-height);
+}
+
+.grid-row--header {
+  @include mixins.grid-row(variables.$header-height);
+}
+
+.grid-row--content {
+  @include mixins.grid-row(variables.$content-height);
+}
+
+.grid-row--footer {
+  @include mixins.grid-row(variables.$footer-height);
+}
+
+.grid-cell {
+  @include mixins.grid-cell;
+
+  &--purple {
+    @include mixins.full-width-band(variables.$color-purple, 100%);
+  }
+
+  &--teal {
+    @include mixins.full-width-band(variables.$color-teal, 100%);
+  }
+
+  &--panel {
+    background-color: variables.$color-white;
+    border: 0;
+  }
+
+  &--quarter {
+    width: 25%;
+  }
+
+  &--padded {
+    padding-top: 15px;
+  }
+
+  &--guide {
+    @include mixins.guide-cell;
+  }
+
+  &--guide-start {
+    @include mixins.guide-cell(true);
+  }
+}
+
+.blue-block {
+  width: 100%;
+  height: 15%;
+  margin-bottom: 10px;
+  background-color: variables.$color-blue;
+  border: 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--tall {
+    height: 92%;
+  }
+}
+
+.grid-guides {
+  opacity: variables.$guides-opacity;
+
+  .grid-row {
+    height: 370px;
+  }
+}
+
+.resize-instruction {
+  margin-top: 1em;
+}
+
+@media (max-width: 600px) {
+  .grid-stage {
+    right: 6px;
+    left: 6px;
+  }
+}

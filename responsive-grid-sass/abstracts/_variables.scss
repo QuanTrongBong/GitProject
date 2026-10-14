@@ -1,0 +1,18 @@
+@use "sass:math";
+
+$color-purple: #9933cc;
+$color-blue: #33b5e5;
+$color-teal: #0099cc;
+$color-gray: #f1f1f1;
+$color-white: #fff;
+$color-black: #000;
+$color-gray-border: grey;
+
+$grid-columns: 12;
+$grid-column-width: math.div(100%, $grid-columns);
+$header-height: 90px;
+$content-height: 230px;
+$footer-height: 50px;
+$grid-height: 250px;
+$grid-overlay-opacity: 0.9;
+$guides-opacity: 0.1;

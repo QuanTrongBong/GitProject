@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 8px;
+  font-family: Arial, sans-serif;
+}
+
+.grid-container {
+  width: 100%;
+}
+
+.grid-stage {
+  position: absolute;
+  right: 10px;
+  left: 8px;
+  width: auto;
+  opacity: 0.9;
+}
+
+.grid-row {
+  height: 250px;
+  overflow: auto;
+  position: relative;
+}
+
+.grid-row--header {
+  height: 90px;
+  overflow: auto;
+  position: relative;
+}
+
+.grid-row--content {
+  height: 230px;
+  overflow: auto;
+  position: relative;
+}
+
+.grid-row--footer {
+  height: 50px;
+  overflow: auto;
+  position: relative;
+}
+
+.grid-cell {
+  width: 8.3333333333%;
+  height: 100%;
+  margin: 0;
+  float: left;
+  background-color: #f1f1f1;
+  border-right: 1px solid grey;
+}
+.grid-cell--purple {
+  width: 100%;
+  height: 100%;
+  border-right-color: transparent;
+  background-color: #9933cc;
+}
+.grid-cell--teal {
+  width: 100%;
+  height: 100%;
+  border-right-color: transparent;
+  background-color: #0099cc;
+}
+.grid-cell--panel {
+  background-color: #fff;
+  border: 0;
+}
+.grid-cell--quarter {
+  width: 25%;
+}
+.grid-cell--padded {
+  padding-top: 15px;
+}
+.grid-cell--guide {
+  background-color: #fff;
+  border-right: 1px solid #000;
+}
+.grid-cell--guide-start {
+  background-color: #fff;
+  border-right: 1px solid #000;
+  border-left: 1px solid #000;
+}
+
+.blue-block {
+  width: 100%;
+  height: 15%;
+  margin-bottom: 10px;
+  background-color: #33b5e5;
+  border: 0;
+}
+.blue-block:last-child {
+  margin-bottom: 0;
+}
+.blue-block--tall {
+  height: 92%;
+}
+
+.grid-guides {
+  opacity: 0.1;
+}
+.grid-guides .grid-row {
+  height: 370px;
+}
+
+.resize-instruction {
+  margin-top: 1em;
+}
+
+@media (max-width: 600px) {
+  .grid-stage {
+    right: 6px;
+    left: 6px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

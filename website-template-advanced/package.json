@@ -1,0 +1,13 @@
+{
+  "name": "website-template-advanced",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A polished responsive website template built with Sass",
+  "scripts": {
+    "build": "sass scss/main.scss css/style.css",
+    "watch": "sass --watch scss/main.scss:css/style.css"
+  },
+  "devDependencies": {
+    "sass": "^1.105.1"
+  }
+}

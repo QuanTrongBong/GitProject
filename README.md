@@ -15,3 +15,4 @@ Dự án thực hành các thao tác Git cơ bản: tạo repository, clone, com
 - `sass-mixins/`: bài thực hành dùng Sass variables và mixins để tái sử dụng kiểu nút, thẻ và typography.
 - `responsive-grid-sass/`: bài tái cấu trúc CSS responsive grid sang SCSS, dùng variables, mixins và partials.
 - `template-page-sass/`: trang Template HTML/CSS được tái cấu trúc thành SCSS với variables, mixins, nesting và partials.
+- `website-template-advanced/`: website template responsive dùng Sass, có hero, menu cố định, card dịch vụ và footer.

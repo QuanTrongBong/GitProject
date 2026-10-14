@@ -1,0 +1,51 @@
+@use "sass:color";
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mixins;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  min-height: 48px;
+  padding: 0 19px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform vars.$transition-standard, background vars.$transition-standard;
+  @include mixins.focus-ring;
+
+  span {
+    font-size: 18px;
+    font-weight: 400;
+    transition: transform vars.$transition-standard;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+
+    span {
+      transform: translateX(3px);
+    }
+  }
+
+  &--primary {
+    color: vars.$color-ink;
+    background: vars.$color-accent;
+
+    &:hover {
+      background: color.scale(vars.$color-accent, $lightness: 12%);
+    }
+  }
+
+  &--light {
+    color: vars.$color-ink;
+    background: vars.$color-white;
+
+    &:hover {
+      background: vars.$color-accent;
+    }
+  }
+}

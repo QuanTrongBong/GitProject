@@ -1,0 +1,133 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mixins;
+
+.navbar {
+  position: fixed;
+  z-index: 10;
+  inset: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: vars.$nav-height;
+  padding-inline: max(24px, calc((100vw - vars.$content-width) / 2));
+  border-bottom: 1px solid rgba(vars.$color-white, 0.12);
+  color: vars.$color-white;
+  background: rgba(vars.$color-ink, 0.88);
+  backdrop-filter: blur(14px);
+
+  &__brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 750;
+    letter-spacing: -0.04em;
+    text-decoration: none;
+    @include mixins.focus-ring;
+  }
+
+  &__brand-mark {
+    display: grid;
+    width: 32px;
+    height: 32px;
+    place-items: center;
+    border-radius: 50%;
+    color: vars.$color-ink;
+    background: vars.$color-accent;
+    font-size: 18px;
+    font-weight: 800;
+  }
+
+  &__brand-accent {
+    color: vars.$color-accent;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__link {
+    position: relative;
+    color: rgba(vars.$color-white, 0.72);
+    font-size: 13px;
+    text-decoration: none;
+    transition: color vars.$transition-standard;
+    @include mixins.focus-ring;
+
+    &::after {
+      position: absolute;
+      right: 0;
+      bottom: -8px;
+      left: 0;
+      height: 2px;
+      background: vars.$color-accent;
+      content: "";
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform vars.$transition-standard;
+    }
+
+    &:hover,
+    &--active {
+      color: vars.$color-white;
+    }
+
+    &:hover::after,
+    &--active::after {
+      transform: scaleX(1);
+    }
+  }
+
+  &__contact {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 15px;
+    border: 1px solid rgba(vars.$color-white, 0.26);
+    border-radius: 4px;
+    color: vars.$color-white;
+    font-size: 12px;
+    text-decoration: none;
+    transition: color vars.$transition-standard, background vars.$transition-standard;
+    @include mixins.focus-ring;
+
+    span {
+      color: vars.$color-accent;
+      font-size: 16px;
+    }
+
+    &:hover {
+      color: vars.$color-ink;
+      background: vars.$color-accent;
+
+      span {
+        color: vars.$color-ink;
+      }
+    }
+  }
+
+  @include mixins.tablet {
+    &__links {
+      gap: 18px;
+    }
+  }
+
+  @include mixins.mobile {
+    height: 64px;
+    padding-inline: 18px;
+
+    &__links {
+      display: none;
+    }
+
+    &__contact {
+      padding: 9px 11px;
+      font-size: 11px;
+    }
+  }
+}

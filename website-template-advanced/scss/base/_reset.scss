@@ -1,0 +1,61 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mixins;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: vars.$nav-height;
+}
+
+body {
+  margin: 0;
+  color: vars.$color-ink;
+  background: vars.$color-paper;
+  font-family: vars.$font-body;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  color: vars.$color-ink;
+  background: vars.$color-accent;
+}
+
+.section-wrap {
+  @include mixins.content-width;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 22px;
+  color: rgba(vars.$color-white, 0.72);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+
+  &__dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: vars.$color-accent;
+  }
+
+  &--dark {
+    color: vars.$color-muted;
+  }
+}

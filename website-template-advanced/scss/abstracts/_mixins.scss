@@ -1,0 +1,25 @@
+@use "variables" as vars;
+
+@mixin content-width {
+  width: min(calc(100% - 48px), vars.$content-width);
+  margin-inline: auto;
+}
+
+@mixin focus-ring {
+  &:focus-visible {
+    outline: 3px solid vars.$color-accent;
+    outline-offset: 4px;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: vars.$breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: vars.$breakpoint-mobile) {
+    @content;
+  }
+}

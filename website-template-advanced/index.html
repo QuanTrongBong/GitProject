@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101923">
+  <meta name="description" content="Creative Web Design — thiết kế website chuyên nghiệp, hiện đại và ấn tượng.">
+  <title>Creative Web Design — Thiết kế số sáng tạo</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar" aria-label="Điều hướng chính">
+    <a class="navbar__brand" href="#" aria-label="Creative Web Design, trang chủ">
+      <span class="navbar__brand-mark" aria-hidden="true">C</span>
+      <span>creative<span class="navbar__brand-accent">.</span></span>
+    </a>
+    <ul class="navbar__links">
+      <li><a class="navbar__link navbar__link--active" href="#">Trang chủ</a></li>
+      <li><a class="navbar__link" href="#services">Dịch vụ</a></li>
+      <li><a class="navbar__link" href="#approach">Giải pháp</a></li>
+      <li><a class="navbar__link" href="#contact">Liên hệ</a></li>
+    </ul>
+    <a class="navbar__contact" href="#contact">Bắt đầu dự án <span aria-hidden="true">↗</span></a>
+  </nav>
+
+  <header class="hero">
+    <div class="hero__background" aria-hidden="true"></div>
+    <div class="hero__content">
+      <p class="eyebrow"><span class="eyebrow__dot"></span> STUDIO THIẾT KẾ SỐ</p>
+      <h1>Ý tưởng tốt.<br><span>Trải nghiệm đáng nhớ.</span></h1>
+      <p class="hero__description">
+        Chúng tôi biến những ý tưởng táo bạo thành website hiện đại, dễ sử dụng
+        và giúp thương hiệu của bạn nổi bật trên không gian số.
+      </p>
+      <div class="hero__actions">
+        <a class="button button--primary" href="#services">Khám phá dịch vụ <span aria-hidden="true">→</span></a>
+        <a class="hero__text-link" href="#approach">Tìm hiểu cách chúng tôi làm việc <span aria-hidden="true">↘</span></a>
+      </div>
+    </div>
+    <div class="hero__note" aria-hidden="true"><span>01</span> / THIẾT KẾ CÓ CHỦ ĐÍCH</div>
+    <div class="hero__scroll" aria-hidden="true"><span></span> CUỘN ĐỂ KHÁM PHÁ</div>
+  </header>
+
+  <main>
+    <section class="services section-wrap" id="services" aria-labelledby="services-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow eyebrow--dark"><span class="eyebrow__dot"></span> CHÚNG TÔI CÓ THỂ GIÚP GÌ?</p>
+          <h2 id="services-title">Giải pháp số<br><span>cho bước tiến tiếp theo.</span></h2>
+        </div>
+        <p class="section-heading__note">Kết hợp chiến lược, thẩm mỹ và công nghệ để tạo ra trải nghiệm thật sự hữu ích.</p>
+      </div>
+
+      <div class="card-grid">
+        <article class="service-card">
+          <div class="service-card__image service-card__image--design">
+            <img src="images/service-design.svg" alt="Minh họa giao diện website đang được thiết kế">
+            <span class="service-card__number">01</span>
+          </div>
+          <div class="service-card__body">
+            <div class="service-card__title-row">
+              <h3>Thiết kế Website</h3>
+              <span class="service-card__arrow" aria-hidden="true">↗</span>
+            </div>
+            <p>Chúng tôi tạo nên website chuyên nghiệp, thân thiện và phản ánh đúng cá tính thương hiệu của bạn.</p>
+            <ul class="service-card__tags" aria-label="Điểm nổi bật">
+              <li>UI/UX</li><li>Responsive</li><li>Thương hiệu</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-card__image service-card__image--growth">
+            <img src="images/service-growth.svg" alt="Minh họa biểu đồ tăng trưởng và tiếp thị số">
+            <span class="service-card__number">02</span>
+          </div>
+          <div class="service-card__body">
+            <div class="service-card__title-row">
+              <h3>SEO &amp; Marketing</h3>
+              <span class="service-card__arrow" aria-hidden="true">↗</span>
+            </div>
+            <p>Đưa thương hiệu đến gần khách hàng hơn với chiến lược nội dung và tăng trưởng bền vững.</p>
+            <ul class="service-card__tags" aria-label="Điểm nổi bật">
+              <li>SEO</li><li>Nội dung</li><li>Phân tích</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-card__image service-card__image--support">
+            <img src="images/service-support.svg" alt="Minh họa đội ngũ hỗ trợ khách hàng">
+            <span class="service-card__number">03</span>
+          </div>
+          <div class="service-card__body">
+            <div class="service-card__title-row">
+              <h3>Hỗ trợ 24/7</h3>
+              <span class="service-card__arrow" aria-hidden="true">↗</span>
+            </div>
+            <p>Đội ngũ tận tâm luôn sẵn sàng đồng hành, để website của bạn hoạt động ổn định mỗi ngày.</p>
+            <ul class="service-card__tags" aria-label="Điểm nổi bật">
+              <li>Bảo trì</li><li>An toàn</li><li>Đồng hành</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="approach" id="approach" aria-labelledby="approach-title">
+      <div class="approach__inner section-wrap">
+        <p class="eyebrow"><span class="eyebrow__dot"></span> CÙNG NHAU TẠO ĐIỀU KHÁC BIỆT</p>
+        <div class="approach__content">
+          <h2 id="approach-title">Một đội ngũ sáng tạo.<br><span>Mọi bước tiến đều có ý nghĩa.</span></h2>
+          <a class="button button--light" href="#contact">Kể chúng tôi nghe ý tưởng <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="approach__detail">
+          <span class="approach__detail-line"></span>
+          <p>Từ phác thảo đầu tiên đến ngày ra mắt, chúng tôi tập trung vào điều quan trọng nhất: tạo trải nghiệm tốt cho khách hàng của bạn.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="footer__main section-wrap">
+      <div class="footer__intro">
+        <a class="footer__brand" href="#" aria-label="Creative Web Design, trang chủ">
+          <span class="navbar__brand-mark" aria-hidden="true">C</span>
+          <span>creative<span class="navbar__brand-accent">.</span></span>
+        </a>
+        <p>Thiết kế trải nghiệm số<br>để thương hiệu tiến xa hơn.</p>
+      </div>
+      <div class="footer__right">
+        <div class="footer__column">
+          <h2>Khám phá</h2>
+          <a href="#services">Dịch vụ</a>
+          <a href="#approach">Giải pháp</a>
+          <a href="#contact">Liên hệ</a>
+        </div>
+        <div class="footer__column">
+          <h2>Kết nối</h2>
+          <a href="mailto:hello@creativeweb.example">hello@creativeweb.example</a>
+          <a href="#contact">Facebook <span aria-hidden="true">↗</span></a>
+          <a href="#contact">LinkedIn <span aria-hidden="true">↗</span></a>
+        </div>
+        <a class="footer__top" href="#" aria-label="Lên đầu trang">↑</a>
+      </div>
+    </div>
+    <div class="footer__bottom section-wrap">
+      <p>© 2025 Creative Web. Bảo lưu mọi quyền.</p>
+      <p>Được tạo nên từ những ý tưởng tốt <span aria-hidden="true">✳</span></p>
+    </div>
+  </footer>
+</body>
+</html>

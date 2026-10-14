@@ -1,0 +1,183 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mixins;
+
+.services {
+  padding-block: 112px 124px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 48px;
+
+  h2 {
+    margin: 0;
+    font-size: clamp(34px, 4.2vw, 52px);
+    font-weight: 600;
+    letter-spacing: -0.065em;
+    line-height: 1.1;
+
+    span {
+      color: vars.$color-muted;
+    }
+  }
+
+  &__note {
+    max-width: 315px;
+    margin: 0 0 5px;
+    color: vars.$color-muted;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  @include mixins.mobile {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+
+  @include mixins.tablet {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include mixins.mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.service-card {
+  overflow: hidden;
+  border: 1px solid vars.$color-line;
+  border-radius: vars.$radius-card;
+  background: vars.$color-white;
+  transition: box-shadow vars.$transition-standard, transform vars.$transition-standard;
+
+  &:hover {
+    box-shadow: vars.$shadow-card;
+    transform: translateY(-6px);
+
+    .service-card__arrow {
+      color: vars.$color-ink;
+      background: vars.$color-accent;
+      transform: rotate(45deg);
+    }
+
+    .service-card__image img {
+      transform: scale(1.04);
+    }
+  }
+
+  &__image {
+    position: relative;
+    display: grid;
+    min-height: 228px;
+    place-items: center;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      inset: 0;
+      object-fit: cover;
+      transition: transform 400ms ease;
+    }
+
+    &--design {
+      background: #e7f2e5;
+    }
+
+    &--growth {
+      background: #f1eee3;
+    }
+
+    &--support {
+      background: #e8edf2;
+    }
+  }
+
+  &__number {
+    position: absolute;
+    top: 16px;
+    left: 17px;
+    display: grid;
+    width: 32px;
+    height: 32px;
+    place-items: center;
+    border: 1px solid rgba(vars.$color-ink, 0.12);
+    border-radius: 50%;
+    color: vars.$color-ink;
+    background: rgba(vars.$color-white, 0.78);
+    font-size: 10px;
+    font-weight: 700;
+    backdrop-filter: blur(8px);
+  }
+
+  &__body {
+    padding: 23px 22px 25px;
+  }
+
+  &__title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 19px;
+    letter-spacing: -0.035em;
+  }
+
+  &__arrow {
+    display: grid;
+    width: 32px;
+    height: 32px;
+    flex: 0 0 auto;
+    place-items: center;
+    border: 1px solid vars.$color-line;
+    border-radius: 50%;
+    font-size: 16px;
+    transition: color vars.$transition-standard, background vars.$transition-standard, transform vars.$transition-standard;
+  }
+
+  p {
+    min-height: 68px;
+    margin: 15px 0 20px;
+    color: vars.$color-muted;
+    font-size: 13px;
+    line-height: 1.75;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      padding: 6px 9px;
+      border-radius: 2px;
+      color: vars.$color-ink-soft;
+      background: #f1f3f0;
+      font-size: 10px;
+    }
+  }
+}
+
+.services {
+  @include mixins.mobile {
+    padding-block: 76px 84px;
+  }
+}

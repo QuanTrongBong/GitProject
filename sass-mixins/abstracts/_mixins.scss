@@ -1,0 +1,15 @@
+@use "variables" as variables;
+
+@mixin button-style($bg-color: variables.$primary-color) {
+  background: $bg-color;
+  color: #fff;
+  padding: variables.$padding-standard;
+  border-radius: variables.$button-radius;
+}
+
+@mixin box-style {
+  background: variables.$card-background;
+  padding: variables.$card-padding;
+  border-radius: variables.$card-radius;
+  box-shadow: variables.$box-shadow-default;
+}

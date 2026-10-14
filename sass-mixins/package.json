@@ -1,0 +1,13 @@
+{
+  "name": "sass-mixins-practice",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Tối ưu CSS bằng Sass variables và mixins",
+  "scripts": {
+    "build": "sass main.scss main.css",
+    "watch": "sass --watch main.scss:main.css"
+  },
+  "devDependencies": {
+    "sass": "^1.105.1"
+  }
+}

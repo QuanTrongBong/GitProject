@@ -1,0 +1,12 @@
+$ink: #24313f;
+$muted: #667586;
+$brand: #635bdb;
+$brand-dark: #4942b8;
+$surface: #f4f5fb;
+$card: #ffffff;
+$success: #247a59;
+
+@mixin focus-ring {
+  outline: 3px solid rgba($brand, 0.28);
+  outline-offset: 3px;
+}

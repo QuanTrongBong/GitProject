@@ -1,0 +1,13 @@
+{
+  "name": "sass-practice",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Thực hành biên dịch SCSS sang CSS bằng Sass CLI",
+  "scripts": {
+    "build": "sass scss/styles.scss css/styles.css && sass scss/components.scss css/components.css",
+    "watch": "sass --watch scss/:css/"
+  },
+  "devDependencies": {
+    "sass": "^1.93.2"
+  }
+}

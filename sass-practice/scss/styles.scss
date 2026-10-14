@@ -1,0 +1,139 @@
+@use "tokens" as *;
+
+:root {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: $ink;
+  background: $surface;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  padding: 36px 18px;
+}
+
+a {
+  color: $brand-dark;
+}
+
+a:focus-visible,
+button:focus-visible {
+  @include focus-ring;
+}
+
+.page {
+  width: min(920px, 100%);
+  margin: 0 auto;
+}
+
+.site-header,
+.lesson-card {
+  border: 1px solid #e5e8f0;
+  border-radius: 16px;
+  background: $card;
+  box-shadow: 0 14px 42px rgba($ink, 0.06);
+}
+
+.site-header {
+  margin-bottom: 22px;
+  padding: 26px clamp(22px, 5vw, 46px);
+
+  .eyebrow {
+    margin: 0 0 8px;
+    color: $brand;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(1.8rem, 5vw, 2.6rem);
+    letter-spacing: -0.04em;
+  }
+
+  p:last-child {
+    max-width: 58ch;
+    margin: 12px 0 0;
+    color: $muted;
+    line-height: 1.7;
+  }
+}
+
+.lesson-card {
+  padding: clamp(22px, 5vw, 42px);
+
+  h2 {
+    margin: 0 0 10px;
+    font-size: 1.3rem;
+  }
+
+  > p {
+    margin: 0;
+    color: $muted;
+    line-height: 1.7;
+  }
+}
+
+.task-list {
+  margin: 24px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+  list-style: none;
+
+  li {
+    padding: 14px 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    border: 1px solid #e8eaf1;
+    border-radius: 10px;
+    background: #fcfcfe;
+    line-height: 1.55;
+  }
+
+  .step {
+    width: 26px;
+    height: 26px;
+    flex: 0 0 auto;
+    display: grid;
+    place-items: center;
+    border-radius: 8px;
+    background: #eeedff;
+    color: $brand-dark;
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+}
+
+.status {
+  margin-top: 24px;
+  padding: 14px 16px;
+  border-left: 4px solid $success;
+  border-radius: 0 8px 8px 0;
+  background: #edf7f2;
+  color: $success;
+  font-weight: 600;
+}
+
+.site-footer {
+  margin-top: 18px;
+  color: $muted;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+@media (max-width: 520px) {
+  body {
+    padding: 18px 12px;
+  }
+}

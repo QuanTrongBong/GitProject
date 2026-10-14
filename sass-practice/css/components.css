@@ -1,0 +1,30 @@
+.button {
+  min-height: 46px;
+  padding: 0 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 9px;
+  background: #635bdb;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 150ms ease, transform 150ms ease;
+}
+.button:hover {
+  transform: translateY(-1px);
+  background: #4942b8;
+  color: #fff;
+}
+.button:active {
+  transform: translateY(0);
+}
+.button:focus-visible {
+  outline: 3px solid rgba(99, 91, 219, 0.28);
+  outline-offset: 3px;
+}
+
+/*# sourceMappingURL=components.css.map */

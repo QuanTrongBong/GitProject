@@ -11,3 +11,4 @@ Dự án thực hành các thao tác Git cơ bản: tạo repository, clone, com
 - `text_formatting.html`: bài thực hành định dạng văn bản HTML và CSS nội tuyến.
 - `html_lists.html`: bài thực hành danh sách có thứ tự, không thứ tự và lồng nhau.
 - `sass-practice/`: bài thực hành biên dịch SCSS sang CSS bằng Sass CLI.
+- `sass-conversion/`: bài chuyển CSS truyền thống sang SCSS theo cấu trúc partial chuẩn.

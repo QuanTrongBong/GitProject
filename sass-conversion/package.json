@@ -1,0 +1,13 @@
+{
+  "name": "sass-conversion-practice",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Chuyển CSS sang SCSS với variables, mixins, nesting và partials",
+  "scripts": {
+    "build": "sass main.scss main.css",
+    "watch": "sass --watch main.scss:main.css"
+  },
+  "devDependencies": {
+    "sass": "^1.105.1"
+  }
+}

@@ -14,3 +14,4 @@ Dự án thực hành các thao tác Git cơ bản: tạo repository, clone, com
 - `sass-conversion/`: bài chuyển CSS truyền thống sang SCSS theo cấu trúc partial chuẩn.
 - `sass-mixins/`: bài thực hành dùng Sass variables và mixins để tái sử dụng kiểu nút, thẻ và typography.
 - `responsive-grid-sass/`: bài tái cấu trúc CSS responsive grid sang SCSS, dùng variables, mixins và partials.
+- `template-page-sass/`: trang Template HTML/CSS được tái cấu trúc thành SCSS với variables, mixins, nesting và partials.

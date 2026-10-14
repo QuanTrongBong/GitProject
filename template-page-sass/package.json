@@ -1,0 +1,13 @@
+{
+  "name": "template-page-sass",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Template web page refactored with Sass",
+  "scripts": {
+    "build": "sass main.scss main.css",
+    "watch": "sass --watch main.scss:main.css"
+  },
+  "devDependencies": {
+    "sass": "^1.105.1"
+  }
+}

@@ -1,0 +1,58 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mixins;
+
+.navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.background {
+  background: vars.$color-black;
+  background-blend-mode: darken;
+  background-size: cover;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  width: vars.$navigation-width;
+
+  li {
+    padding: 26px 30px;
+    list-style: none;
+
+    a {
+      color: vars.$color-white;
+      text-decoration: none;
+
+      &:hover {
+        color: vars.$color-gray;
+      }
+    }
+  }
+}
+
+.logo {
+  @include mixins.flex-center;
+
+  img {
+    width: 180px;
+    border-radius: 50px;
+  }
+}
+
+.rightNav {
+  width: vars.$search-width;
+  text-align: right;
+}
+
+#search {
+  padding: 5px;
+  border: 2px solid vars.$color-border;
+  border-radius: 9px;
+  font-size: 17px;
+}

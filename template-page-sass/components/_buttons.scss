@@ -1,0 +1,11 @@
+@use "../abstracts/mixins" as mixins;
+
+.btn {
+  @include mixins.outlined-button;
+  margin: 7px 0;
+
+  &-sm {
+    padding: 6px 10px;
+    vertical-align: middle;
+  }
+}
